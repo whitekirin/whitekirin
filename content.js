@@ -90,7 +90,7 @@ function postData(jsonString, type) {
     xhttp.open("POST", url, false);
     xhttp.setRequestHeader("Content-type", 'application/json+fhir');
     xhttp.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 201) 
+        if (this.readyState == 4) 
         {
             ret = JSON.parse(this.responseText);
             alert(this.responseText);
