@@ -51,7 +51,7 @@ var FindingObservation={
     "component": [ {
       "code": {
         "coding": [ {
-          "system": "https://203.64.84.150:58443/r5/fhir/CodeSystem/8f414151-bf5f-46ce-94fe-f96d9e867d29",
+          "system": "https://drive.google.com/file/d/1abnF4S9jzHAoEdn1wMDcNzEmDEWyOKRB/view?usp=share_link",
           "code": "image.finding.keyimage"
         } ]
       },
@@ -90,7 +90,7 @@ function postData(jsonString, type) {
     xhttp.open("POST", url, false);
     xhttp.setRequestHeader("Content-type", 'application/json+fhir');
     xhttp.onreadystatechange = function () {
-        if (this.readyState == 4) 
+        if (this.readyState == 4 && this.status == 201) 
         {
             ret = JSON.parse(this.responseText);
             alert(this.responseText);
